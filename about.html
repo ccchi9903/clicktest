@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About us</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<style type="text/css">
+	h1{
+		text-align: center;
+	}
+	body{
+		text-align: center;
+	}
+	#button1{
+		text-align: center;
+		width: 500px;
+		height: 500px;
+		background-color: red;
+		border: solid 5px black;
+		font-size: 100px;
+		color: white;
+
+	}
+	#result{
+		text-align: center;
+	}
+	#clicks{
+		font-size: 100px;
+	}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			//alert("hi");
+		}
+	</script>
+</head>
+<body>
+<p><h1>10 second click test</h1></p>
+<p id="jikan">0</p>
+<p id="clicks" style="float: right;">0</p>
+<button id="button1" onclick="count()">Click to start!</button>
+<p id = "result"></p>
+<!-- <p><button id="button2">Stream test</button></p> -->
+<script type="text/javascript">
+var a = 0;
+var b = 0;
+var c = false;
+var myVar;
+	function count()
+		{
+			if(c == false)
+			{
+				c = true;
+				myVar = setInterval(function(){ time() }, 1000);
+
+			}
+			a++;
+			document.getElementById("clicks").innerHTML = a;
+		}
+	function time()
+	{
+		b++;
+		c = true;
+		if(b == 10)
+		{
+			var d = document.getElementById("button1");
+			d.style.display = "none";
+			clearInterval(myVar);
+			document.getElementById("result").innerHTML = "<p>You have clicked " + a + " times in 10 seconds.</p>Your clicking speed is " + a/10 + " clicks per second.";
+		}
+		document.getElementById("jikan").innerHTML = b;
+	}
+</script>
+</body>
+</html>
