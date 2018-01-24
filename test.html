@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing page</title>
+	<style type="text/css">
+	body{
+		background-color: grey;
+	}
+	a{
+		text-decoration: none;
+		padding: 0px;
+		margin: 0px;
+	}
+		@keyframes example{
+		    0%   {background-color:red; left:0px; top:0px;}
+    		25%  {background-color:yellow; left:1000px; top:0px; font-size: 35px;}
+   	 		50%  {background-color:blue; left:1000px; top:600px;font-size: 45px;}
+   	 		75%  {background-color:green; left:0px; top:600px;font-size: 35px;}
+   			100% {background-color:red; left:0px; top:0px; font-size: 25px;}
+		}
+		div{
+			display: inline-block;
+			position: relative;
+			border: solid 5px black;
+			border-radius: 10px;
+			padding: 20px;
+			font-size: 25px;
+			margin: 10px;
+			background-color: yellow;
+			animation-name: example;
+			animation-duration: 5s;
+			animation-delay: 5s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+	</style>
+</head>
+<body>
+<div ><a href="https://www.google.com">Hi</a></div>
+</body>
+</html>
